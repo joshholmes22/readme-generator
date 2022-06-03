@@ -1,6 +1,7 @@
 // imports
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateFunctions = require("./utils/generateFunctions");
 
 // Questions array
 const questions = [
@@ -59,12 +60,12 @@ const questions = [
       {
         key: "c",
         name: "GNU General Public License v3.0",
-        value: "GNU General",
+        value: "GNU_General",
       },
       {
         key: "d",
         name: "GNU General Public License v2.0",
-        value: "GNU General",
+        value: "GNU_General",
       },
       {
         key: "e",
@@ -113,13 +114,11 @@ const questions = [
 
 // generate Readme file
 const generateReadme = (answers) => {
-  return `# ${answers.projectTitle} ![${
-    answers.license
-  }](https://img.shields.io/badge/${answers.license}-License-green)
-    # Table of Contents
-    - [Description](#description)
-    ${answers.isInstallation ? "- [Installation](#installation)" : null}
-  `;
+  return `${generateFunctions.getContentSection(answers)} \n
+    ${generateFunctions.getDescriptionSection(answers)} \n
+    ${
+      answers.isInstallation ? generateFunctions.getInstallSection(answers) : ""
+    }`;
 };
 
 const init = async () => {
