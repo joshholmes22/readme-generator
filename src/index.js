@@ -1,7 +1,8 @@
-// 1. import inquirer
+// imports
 const inquirer = require("inquirer");
+const fs = require("fs");
 
-// 2. declare your questions array
+// Questions array
 const questions = [
   {
     type: "input",
@@ -110,14 +111,27 @@ const questions = [
   },
 ];
 
-// 3. declare your init function to ask questions
+// generate Readme file
+const generateReadme = (answers) => {
+  return `# ${answers.projectTitle} ![${
+    answers.license
+  }](https://img.shields.io/badge/${answers.license}-License-green)
+    # Table of Contents
+    - [Description](#description)
+    ${answers.isInstallation ? "- [Installation](#installation)" : null}
+  `;
+};
+
 const init = async () => {
   // get answers for first set of questions
   const answers = await inquirer.prompt(questions);
+  console.log(answers);
 
   // display answers
-  console.log(answers);
+  const content = generateReadme(answers);
+
+  // write to file
+  fs.writeFileSync("./generated-readme.md", content);
 };
 
-// 4. start your application
 init();
