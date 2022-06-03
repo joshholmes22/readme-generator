@@ -118,7 +118,16 @@ const generateReadme = (answers) => {
     ${generateFunctions.getDescriptionSection(answers)} \n
     ${
       answers.isInstallation ? generateFunctions.getInstallSection(answers) : ""
-    }`;
+    }
+    ${generateFunctions.getLicenseSection(answers)}
+    ${
+      answers.isContributing
+        ? generateFunctions.getContributingSection(answers)
+        : ""
+    }
+    ${answers.isTest ? generateFunctions.getTestSection(answers) : ""}
+    ${generateFunctions.getQuestionsSection(answers)}
+    `;
 };
 
 const init = async () => {
