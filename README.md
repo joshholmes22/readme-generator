@@ -18,7 +18,7 @@ npm run start
 ```
 
 ## Demo Video
-Please click [Here](./src/media/readme-generator-walkthrough.mp4) to view the demo video of the project
+Please click [Here](https://youtu.be/HQhzqSbDM9s) to view the demo video of the project
 
 ## Contact Me
 Email me at josh@glowingmanagement.com
