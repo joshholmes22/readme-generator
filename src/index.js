@@ -42,37 +42,10 @@ const questions = [
     },
   },
   {
-    type: "expand",
+    type: "list",
     name: "license",
-    message:
-      "Which license would you like to use? (Enter H to view all options)",
-    choices: [
-      {
-        key: "a",
-        name: "MIT License",
-        value: "MIT",
-      },
-      {
-        key: "b",
-        name: "Apache License 2.0",
-        value: "Apache",
-      },
-      {
-        key: "c",
-        name: "GNU General Public License v3.0",
-        value: "GNU_General",
-      },
-      {
-        key: "d",
-        name: "GNU General Public License v2.0",
-        value: "GNU_General",
-      },
-      {
-        key: "e",
-        name: "Other License",
-        value: "other",
-      },
-    ],
+    message: "Which license would you like to use?",
+    choices: ["MIT", "Apache", "GNU", "Other"],
   },
   {
     type: "confirm",

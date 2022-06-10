@@ -6,7 +6,7 @@ A generator to create README files
 ## Getting Started
 
 ```
-git clone (URL)
+git clone git@github.com:glowingmanagement/readme-generator.git
 cd readme-generator
 npm install
 ```
@@ -17,7 +17,8 @@ npm install
 npm run start
 ```
 
-## Screenshots
+## Demo Video
+Please click [Here](./src/media/readme-generator-walkthrough.mp4) to view the demo video of the project
 
 ## Contact Me
 Email me at josh@glowingmanagement.com
