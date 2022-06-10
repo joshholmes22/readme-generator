@@ -1,4 +1,5 @@
 const getContentSection = (answers) => {
+  console.log(answers);
   return `# ${answers.projectTitle} ![${
     answers.license
   }](https://img.shields.io/badge/${answers.license}-License-green)
@@ -7,7 +8,7 @@ const getContentSection = (answers) => {
 ${answers.isInstallation ? "- [Installation](#installation)" : ""}
 ${answers.isUsage ? "- [Usage](#usage)" : ""}
 - [License](#license)
-${answers.isContributing ? "- [Contributing](#contributing)" : ""}
+${answers.isContributing ? "- [Contributions](#contributions)" : ""}
 ${answers.isTest ? "- [Tests](#tests)" : ""}
 - [Questions](#questions)`;
 };
@@ -24,6 +25,16 @@ const getInstallSection = (answers) => {
 Please follow the instructions below:
 \`\`\`
 ${answers.installation}
+\`\`\`
+`;
+};
+
+const getUsageSection = (answers) => {
+  return `
+## Usage
+Please follow the instructions below:
+\`\`\`
+${answers.usage}
 \`\`\`
 `;
 };
@@ -64,6 +75,7 @@ module.exports = {
   getContentSection,
   getDescriptionSection,
   getInstallSection,
+  getUsageSection,
   getLicenseSection,
   getContributingSection,
   getTestSection,

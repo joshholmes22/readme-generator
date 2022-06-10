@@ -119,6 +119,7 @@ const generateReadme = (answers) => {
     ${
       answers.isInstallation ? generateFunctions.getInstallSection(answers) : ""
     }
+    ${answers.isUsage ? generateFunctions.getUsageSection(answers) : ""}
     ${generateFunctions.getLicenseSection(answers)}
     ${
       answers.isContributing
@@ -133,7 +134,6 @@ const generateReadme = (answers) => {
 const init = async () => {
   // get answers for first set of questions
   const answers = await inquirer.prompt(questions);
-  console.log(answers);
 
   // display answers
   const content = generateReadme(answers);

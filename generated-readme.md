@@ -1,10 +1,10 @@
-# Test ![GNU_General](https://img.shields.io/badge/GNU_General-License-green)
+# test ![MIT](https://img.shields.io/badge/MIT-License-green)
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
+- [Contributions](#contributions)
 - [Tests](#tests)
 - [Questions](#questions) 
 
@@ -20,8 +20,15 @@ test
 ```
 
     
+## Usage
+Please follow the instructions below:
+```
+test
+```
+
+    
 ## License
-GNU_General License
+MIT License
 
     
 ## Contributions
@@ -36,8 +43,8 @@ test
     
     
 ## Questions
-Please contact me on my email: josh@email.com 
+Please contact me on my email: tes 
 
-Visit my GitHub profile [here](https://github.com)
+Visit my GitHub profile [here](test)
     
     
